@@ -21,7 +21,6 @@
           <input
             class="inputTodo"
             type="text"
-            name="Todo"
             id="inputTodo"
             placeholder="First Todo"
             autocomplete="off"
@@ -29,11 +28,15 @@
         </div>
         <div class="listTodo">
           <div id="list-todo">
-            <label id="labelTodo" class="form-control">
+            <label
+              id="labelTodo"
+              class="form-control completed"
+            >
               <input
                 class="checkbox"
                 type="checkbox"
                 name="delete"
+                checked
               />
               Checkbox
             </label>

@@ -18,3 +18,8 @@
   padding: 0 5rem;
   font-weight: var(--fw-700);
 }
+
+.completed {
+  text-decoration: line-through;
+  color: rgb(163, 163, 163);
+}

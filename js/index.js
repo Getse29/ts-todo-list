@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     listTodo === null || listTodo === void 0 ? void 0 : listTodo.addEventListener('click', todoInput);
 });
 /* functions */
+/* Sends new todos and reset Form */
 const formTodo = (e) => {
     e.preventDefault();
     const todoValue = document.getElementById('inputTodo').value;
@@ -22,5 +23,5 @@ const formTodo = (e) => {
 };
 const todoInput = (e) => {
     const todoTarget = e.target;
-    ui.deleteTodo(todoTarget);
+    ui.todoChecked(todoTarget);
 };

@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* functions */
+/* Sends new todos and reset Form */
 const formTodo = (e: Event): void => {
   e.preventDefault();
   const todoValue = (
@@ -30,5 +31,6 @@ const formTodo = (e: Event): void => {
 
 const todoInput = (e: Event) => {
   const todoTarget = e.target as HTMLInputElement;
-  ui.deleteTodo(todoTarget);
+
+  ui.todoChecked(todoTarget);
 };
