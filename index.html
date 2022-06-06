@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>TodoList TypeScript</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <div class="hero"></div>
+    <div class="container">
+      <div class="title">
+        <h1>Todo List</h1>
+      </div>
+      <form class="form" id="form">
+        <div class="todo">
+          <input
+            class="inputTodo"
+            type="text"
+            name="Todo"
+            id="inputTodo"
+            placeholder="First Todo"
+            autocomplete="off"
+          />
+        </div>
+        <div class="listTodo">
+          <div id="list-todo">
+            <label id="labelTodo" class="form-control">
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="delete"
+              />
+              Checkbox
+            </label>
+          </div>
+          <div class="container-text">
+            <div class="number-items">
+              <p>5 items left</p>
+            </div>
+            <div class="options-items">
+              <p>All</p>
+              <p>Active</p>
+              <p>Completed</p>
+              <p>Clear Completed</p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="/js/index.js" type="module"></script>
+  </body>
+</html>

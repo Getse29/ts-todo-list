@@ -1,0 +1,101 @@
+.listTodo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  background-color: rgb(255, 255, 255);
+  padding: 3rem;
+  border-radius: 0.5rem;
+}
+
+.container-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  font-weight: var(--fw-700);
+}
+
+.options-items {
+  display: flex;
+}
+
+.options-items p {
+  margin-left: 2rem;
+}
+
+.number-items {
+  color: rgb(78, 78, 78);
+}
+
+/* checkbox */
+.form-control {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 1em;
+  user-select: none;
+}
+
+.form-control + .form-control {
+  margin-top: 1em;
+}
+
+.checkbox {
+  /*Removingthedefaultcheckboxstyling.*/
+  appearance: none;
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  font: inherit;
+  /* Styling the checkbox. */
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  /* Centering the checkbox. */
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  /* backcoundcolor */
+  background-color: rgba(255, 255, 255, 0);
+  background-size: cover;
+  background-position: center;
+  border-color: rgba(0, 0, 0, 0.278);
+  width: 3rem;
+  height: 3rem;
+  border-width: 2px;
+  border-color: rgba(0, 191, 115, 0.5);
+}
+
+.checkbox::before {
+  content: '';
+  width: 0.65em;
+  height: 0.65em;
+  /* It's scaling the element to 0. */
+  transform: scale(0);
+  /* It's animating the `transform` property. */
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em rgb(64, 226, 75);
+  /* It's a color keyword that is not supported by all browsers. It's a fallback for browsers that
+  don't support the `background-color: currentColor;` property. */
+  background-color: CanvasText;
+
+  /* Setting the origin of the transform to the bottom left corner of the element. */
+  transform-origin: bottom left;
+  /* Creating a polygon shape. */
+  clip-path: polygon(
+    14% 44%,
+    0 65%,
+    50% 100%,
+    100% 16%,
+    80% 0%,
+    43% 62%
+  );
+}
+
+.checkbox:checked::before {
+  transform: scale(1);
+}

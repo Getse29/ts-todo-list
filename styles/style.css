@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
+@import url('./normalize.css');
+@import url('./resetRems.css');
+@import url('./todo.css');
+@import url('./listItems.css');
+
+:root {
+  --fontPrimary: 'Oxygen', sans-serif;
+  --fw-400: 400;
+  --fw-700: 700;
+  --gradientBackGround: linear-gradient(
+    to right top,
+    rgb(5, 25, 55, 0.5),
+    rgba(0, 77, 122, 0.5),
+    rgba(0, 135, 147, 0.5),
+    rgba(0, 191, 115, 0.5),
+    rgba(166, 235, 18, 0.5)
+  );
+
+  --heroImg: url('../img/hero.webp');
+}
+
+body {
+  background-color: rgb(43, 47, 62);
+  font-family: var(--fontPrimary);
+}
+
+/* Setting the background image of the hero section. */
+.hero {
+  background-image: var(--gradientBackGround),
+    var(--heroImg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40vh;
+}
+/* Centering the content of the container. */
+.container {
+  display: flex;
+  flex-direction: column;
+  /*  */
+  width: 50%;
+  margin: -40rem auto 0;
+}
+
+.title {
+  font-size: 3rem;
+  color: white;
+}
+
+.title h1 {
+  text-align: left;
+  font-weight: var(--fw-700);
+}
