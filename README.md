@@ -4,7 +4,7 @@
 
 ### Crear un todo list que tenga las siguientes funciones
 
-1. AÑadir un nuevo todo
+1. Añadir un nuevo todo
 2. Seleccionar todos completados
 3. Boton que visualice todos los todos
 4. Boton que visualice los todos activos (los que no estan terinados)
