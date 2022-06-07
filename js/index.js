@@ -6,11 +6,14 @@ const ui = new UI();
 const form = document.querySelector('#form');
 const listTodo = document.getElementById('list-todo');
 const showCompleted = document.getElementById('showCompleted');
+const showActived = document.getElementById('showActived');
+const buttonActived = document.getElementById('showActived');
 /* events */
 document.addEventListener('DOMContentLoaded', () => {
     form === null || form === void 0 ? void 0 : form.addEventListener('submit', formTodo);
     listTodo === null || listTodo === void 0 ? void 0 : listTodo.addEventListener('click', todoInput);
     showCompleted === null || showCompleted === void 0 ? void 0 : showCompleted.addEventListener('click', showCompletedItems);
+    showActived === null || showActived === void 0 ? void 0 : showActived.addEventListener('click', showActivedItems);
 });
 /* functions */
 /* Sends new todos and reset Form */
@@ -29,7 +32,18 @@ const todoInput = (e) => {
     ui.todoChecked(todoTarget);
 };
 const showCompletedItems = (e) => {
-    console.log(e);
     const todo = document.querySelectorAll('#labelTodo');
     ui.showCompleted(todo);
+};
+const showActivedItems = (e) => {
+    const todo = document.querySelectorAll('#labelTodo');
+    if ((buttonActived.disabled = false)) {
+        buttonActived.disabled = true;
+        ui.showActiveds(todo);
+        console.log('true');
+        return;
+    }
+    console.log('false');
+    buttonActived.disabled = false;
+    ui.showActiveds(todo);
 };

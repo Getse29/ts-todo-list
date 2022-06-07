@@ -44,7 +44,6 @@ export class UI {
   }
 
   showCompleted(todo: NodeListOf<Element>): void {
-    console.clear();
     todo.forEach(item => {
       if (
         !item.classList.contains('completed') &&
@@ -59,13 +58,19 @@ export class UI {
     });
   }
 
-  showActiveds(todo: HTMLInputElement) {
-    console.log(todo.checked);
-    if (todo.classList.contains('completed')) {
-      console.log('LO tiene');
-    } else {
-      console.log('No lo tiene');
-    }
+  showActiveds(todo: NodeListOf<Element>) {
+    todo.forEach(item => {
+      if (
+        item.classList.contains('completed') &&
+        !item.classList.contains('noActived')
+      ) {
+        item.classList.remove('form-control');
+        item.classList.add('noActived');
+      } else {
+        item.classList.add('form-control');
+        item.classList.remove('noActived');
+      }
+    });
   }
 
   deleteTodo(todo: HTMLInputElement): void {

@@ -21,13 +21,17 @@
 
 .completed {
   color: rgb(163, 163, 163);
+  text-decoration: line-through;
 }
 
 .completed:hover {
-  text-decoration: line-through;
   transition: 0.2s ease;
 }
 
 .noCompleted {
+  display: none;
+}
+
+.noActived {
   display: none;
 }

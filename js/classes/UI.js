@@ -39,7 +39,6 @@ export class UI {
             (_b = todo.parentElement) === null || _b === void 0 ? void 0 : _b.classList.remove('completed');
     }
     showCompleted(todo) {
-        console.clear();
         todo.forEach(item => {
             if (!item.classList.contains('completed') &&
                 !item.classList.contains('noCompleted')) {
@@ -53,13 +52,17 @@ export class UI {
         });
     }
     showActiveds(todo) {
-        console.log(todo.checked);
-        if (todo.classList.contains('completed')) {
-            console.log('LO tiene');
-        }
-        else {
-            console.log('No lo tiene');
-        }
+        todo.forEach(item => {
+            if (item.classList.contains('completed') &&
+                !item.classList.contains('noActived')) {
+                item.classList.remove('form-control');
+                item.classList.add('noActived');
+            }
+            else {
+                item.classList.add('form-control');
+                item.classList.remove('noActived');
+            }
+        });
     }
     deleteTodo(todo) {
         var _a;

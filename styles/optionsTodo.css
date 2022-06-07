@@ -10,7 +10,7 @@
   display: flex;
 }
 
-.options-items p {
+.options-items button {
   margin-left: 2rem;
 }
 

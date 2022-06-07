@@ -10,6 +10,10 @@ const form: Element | null =
 const listTodo = document.getElementById('list-todo');
 const showCompleted =
   document.getElementById('showCompleted');
+const showActived = document.getElementById('showActived');
+const buttonActived = document.getElementById(
+  'showActived'
+) as HTMLButtonElement;
 
 /* events */
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'click',
     showCompletedItems
   );
+  showActived?.addEventListener('click', showActivedItems);
 });
 
 /* functions */
@@ -44,9 +49,20 @@ const todoInput = (e: Event) => {
 };
 
 const showCompletedItems = (e: Event) => {
-  console.log(e);
+  const todo = document.querySelectorAll('#labelTodo');
+  ui.showCompleted(todo);
+};
 
+const showActivedItems = (e: Event) => {
   const todo = document.querySelectorAll('#labelTodo');
 
-  ui.showCompleted(todo);
+  if ((buttonActived.disabled = false)) {
+    buttonActived.disabled = true;
+    ui.showActiveds(todo);
+    console.log('true');
+    return;
+  }
+  console.log('false');
+  buttonActived.disabled = false;
+  ui.showActiveds(todo);
 };
