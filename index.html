@@ -28,15 +28,11 @@
         </div>
         <div class="listTodo">
           <div id="list-todo">
-            <label
-              id="labelTodo"
-              class="form-control completed"
-            >
+            <label id="labelTodo" class="form-control">
               <input
                 class="checkbox"
                 type="checkbox"
                 name="delete"
-                checked
               />
               Checkbox
             </label>
@@ -47,8 +43,10 @@
             </div>
             <div class="options-items">
               <p>All</p>
-              <p>Active</p>
-              <p>Completed</p>
+              <p class="option-buttons">Show Active</p>
+              <p class="option-buttons" id="showCompleted">
+                Completed
+              </p>
               <p>Clear Completed</p>
             </div>
           </div>

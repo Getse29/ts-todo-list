@@ -3,8 +3,8 @@
 @import url('./resetRems.css');
 @import url('./todo.css');
 @import url('./listItems.css');
-
-:root {
+@import url('./optionsTodo.css');
+:root  {
   --fontPrimary: 'Oxygen', sans-serif;
   --fw-400: 400;
   --fw-700: 700;

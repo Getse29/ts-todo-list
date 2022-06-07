@@ -1,0 +1,28 @@
+.container-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  font-weight: var(--fw-700);
+}
+
+.options-items {
+  display: flex;
+}
+
+.options-items p {
+  margin-left: 2rem;
+}
+
+.number-items {
+  color: rgb(78, 78, 78);
+}
+
+.option-buttons {
+  cursor: pointer;
+}
+
+.option-buttons:hover {
+  color: rgb(169, 169, 169);
+  transition: 0.2s ease-in;
+}

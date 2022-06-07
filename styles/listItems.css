@@ -7,26 +7,6 @@
   border-radius: 0.5rem;
 }
 
-.container-text {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.5rem;
-  margin-top: 2rem;
-  font-weight: var(--fw-700);
-}
-
-.options-items {
-  display: flex;
-}
-
-.options-items p {
-  margin-left: 2rem;
-}
-
-.number-items {
-  color: rgb(78, 78, 78);
-}
-
 /* checkbox */
 .form-control {
   font-size: 2rem;
@@ -36,6 +16,7 @@
   grid-template-columns: 1em auto;
   gap: 1em;
   user-select: none;
+  cursor: pointer;
 }
 
 .form-control + .form-control {
@@ -68,6 +49,7 @@
   height: 3rem;
   border-width: 2px;
   border-color: rgba(0, 191, 115, 0.5);
+  cursor: pointer;
 }
 
 .checkbox::before {

@@ -20,6 +20,14 @@
 }
 
 .completed {
-  text-decoration: line-through;
   color: rgb(163, 163, 163);
+}
+
+.completed:hover {
+  text-decoration: line-through;
+  transition: 0.2s ease;
+}
+
+.noCompleted {
+  display: none;
 }
