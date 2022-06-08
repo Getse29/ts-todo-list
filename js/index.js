@@ -3,11 +3,11 @@ import { Todo } from './classes/Todo.js';
 import { UI } from './classes/UI.js';
 /* Variables */
 const ui = new UI();
+let isActived = true;
 const form = document.querySelector('#form');
 const listTodo = document.getElementById('list-todo');
 const showCompleted = document.getElementById('showCompleted');
 const showActived = document.getElementById('showActived');
-const buttonActived = document.getElementById('showActived');
 /* events */
 document.addEventListener('DOMContentLoaded', () => {
     form === null || form === void 0 ? void 0 : form.addEventListener('submit', formTodo);
@@ -37,13 +37,14 @@ const showCompletedItems = (e) => {
 };
 const showActivedItems = (e) => {
     const todo = document.querySelectorAll('#labelTodo');
-    if ((buttonActived.disabled = false)) {
-        buttonActived.disabled = true;
-        ui.showActiveds(todo);
-        console.log('true');
+    const inputTodo = document.getElementById('inputTodo');
+    ui.showActiveds(todo);
+    if (isActived) {
+        inputTodo.disabled = true;
+        isActived = false;
         return;
     }
-    console.log('false');
-    buttonActived.disabled = false;
-    ui.showActiveds(todo);
+    isActived = true;
+    inputTodo.removeAttribute('disabled');
 };
+/*  */

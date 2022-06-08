@@ -5,15 +5,13 @@ import { UI } from './classes/UI.js';
 /* Variables */
 const ui = new UI();
 
+let isActived = true;
 const form: Element | null =
   document.querySelector('#form');
 const listTodo = document.getElementById('list-todo');
 const showCompleted =
   document.getElementById('showCompleted');
 const showActived = document.getElementById('showActived');
-const buttonActived = document.getElementById(
-  'showActived'
-) as HTMLButtonElement;
 
 /* events */
 document.addEventListener('DOMContentLoaded', () => {
@@ -53,16 +51,22 @@ const showCompletedItems = (e: Event) => {
   ui.showCompleted(todo);
 };
 
-const showActivedItems = (e: Event) => {
+const showActivedItems = (e: Event): void => {
   const todo = document.querySelectorAll('#labelTodo');
+  const inputTodo = document.getElementById(
+    'inputTodo'
+  ) as HTMLInputElement;
 
-  if ((buttonActived.disabled = false)) {
-    buttonActived.disabled = true;
-    ui.showActiveds(todo);
-    console.log('true');
+  ui.showActiveds(todo);
+
+  if (isActived) {
+    inputTodo.disabled = true;
+    isActived = false;
     return;
   }
-  console.log('false');
-  buttonActived.disabled = false;
-  ui.showActiveds(todo);
+
+  isActived = true;
+  inputTodo.removeAttribute('disabled');
 };
+
+/*  */

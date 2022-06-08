@@ -14,6 +14,10 @@
 
 ---
 
+1. Cuando se visualice algo en especifico y darle checked tenerlo bloqueado
+
+---
+
 Opcional:
 Los todos deberian estar guardados por localStorage
 
